@@ -8,7 +8,7 @@ import retrofit2.http.POST
 
 interface PokemonService {
 
-    @GET("pokemons?limit=10&page=1")
+    @GET("pokemon")
     fun getPokemonList () : Call<PokemonListResponse>
 
     @GET("pokemons/{uid}")

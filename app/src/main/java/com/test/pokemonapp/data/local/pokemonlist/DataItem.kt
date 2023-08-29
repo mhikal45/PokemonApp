@@ -7,18 +7,27 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class DataItem(
 
-	@field:SerializedName("number")
+	@field:SerializedName("id")
 	val number: String? = null,
-
-	@field:SerializedName("types")
-	val types: List<TypesItem?>? = null,
 
 	@field:SerializedName("name")
 	val name: String? = null,
 
-	@field:SerializedName("avatar")
+	@field:SerializedName("sprites")
 	val avatar: String? = null,
 
-	@field:SerializedName("uuid")
-	val uuid: String? = null
+	@field:SerializedName("abilities")
+	val abilities : List<AbilityItem?>? = null
+
+) : Parcelable
+
+@Parcelize
+data class AbilityItem (
+
+	@field:SerializedName("id")
+	val number : String? = null,
+
+	@field:SerializedName("name")
+	val name: String? = null
+
 ) : Parcelable
